@@ -3,12 +3,15 @@
     {
       "src": "api/index.py",
       "use": "@vercel/python",
-      "config": { "requirementsPath": "backend/requirements.txt" }
-    },
-    { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+      "config": {
+        "includeFiles": ["backend/**/*"]
+      }
+    }
   ],
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.py" },
-    { "source": "/(.*)", "destination": "/frontend/$1" }
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    }
   ]
 }
