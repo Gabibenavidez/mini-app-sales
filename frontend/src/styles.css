@@ -5,8 +5,9 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
-  color: #1a1a1a;
-  background: #fafafa;
+  background: #000;
+  color: #fff;
+
 }
 
 main {
