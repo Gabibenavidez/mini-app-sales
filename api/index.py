@@ -16,3 +16,5 @@ service = SalesService(repository)
 
 app = FastAPI()
 app.include_router(create_router(service))
+
+handler = Mangum(app)
