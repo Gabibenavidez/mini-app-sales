@@ -1,3 +1,6 @@
+
+
+
 # Chifles Mini App
 
 Mini sales platform: FastAPI backend + React frontend (Vite + TypeScript).
