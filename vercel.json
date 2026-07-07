@@ -1,6 +1,10 @@
 {
   "builds": [
-    { "src": "api/index.py", "use": "@vercel/python" },
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": { "requirementsPath": "backend/requirements.txt" }
+    },
     { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
   ],
   "rewrites": [
